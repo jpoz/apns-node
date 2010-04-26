@@ -67,7 +67,7 @@ APNS.prototype.notify = function(device_id, obj) {
   var json = JSON.stringify({'aps':obj});
   
   var buffer = this.notification_buffer(device_id, json);
-  if (this.client.readyState == 'ready') {
+  if (this.client.readyState == 'open') {
     this.client.write(buffer);
   } else {
     this.waiting_buffers.push(buffer)

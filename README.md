@@ -2,6 +2,10 @@
 
 Apple push notification service for Node.js
 
+## Warning
+
+You need node v0.1.92 for apns-node :-)
+
 ## Usage
 
     var pem_path = './secure.pem'
