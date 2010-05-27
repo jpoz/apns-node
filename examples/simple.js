@@ -5,4 +5,4 @@ var device_id = require('fs').readFileSync('./device_id.txt');
 // remember to remove "<", ">" and " "'s
 
 var APNS = require('../apns').createServer(pem_path);
-APNS.notify(device_id, { alert:"Hello", sound: "default", badge:7 });
+APNS.notify(device_id, { alert:"Hello", sound: "default", badge:7 }).end();

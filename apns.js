@@ -72,6 +72,8 @@ APNS.prototype.notify = function(device_id, obj) {
   } else {
     this.waiting_buffers.push(buffer)
   }
+  
+  return this;
 }
 
 APNS.prototype.HEXpack = function(str){
@@ -97,6 +99,11 @@ APNS.prototype.notification_buffer = function(device_id, json) {
   });
   
   return buffer;
+}
+
+
+APNS.prototype.end = function() {
+  this.client.end();
 }
 
 
