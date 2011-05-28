@@ -2,9 +2,9 @@
 
 Apple push notification service for Node.js
 
-## Warning
+## Warning-Update
 
-You need node v0.1.92 for apns-node :-)
+apns-node uses now the new tls-API. It should work with node v0.4.8.
 
 ## Usage
 
